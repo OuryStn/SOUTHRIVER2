@@ -1,3 +1,4 @@
+/* CSS Global */
 * {
     box-sizing: border-box;
 }
@@ -7,9 +8,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #333;    
 }
 
+/* Styles pour le Header et la Navbar */
 header {
     text-align: center;
     background-color: #f8f9fa;
@@ -17,7 +19,7 @@ header {
 }
 
 .navbar {
-    background-color: #c00; /* Rouge pour le logo */
+    background-color: #c00;
     color: white;
     padding: 10px 0;
 }
@@ -31,10 +33,10 @@ header {
 }
 
 .logo img {
-    width: 150px; /* Ajustez la taille selon votre logo */
+    width: 150px;
     height: auto;
-    border: 3px solid white; /* Bordure blanche pour le logo */
-    border-radius: 10px; /* Coins arrondis */
+    border: 3px solid white;
+    border-radius: 10px;
 }
 
 nav ul {
@@ -110,3 +112,46 @@ footer {
     background-color: #333;
     color: white;
 }
+
+/* Media Query pour les écrans de téléphone */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .features {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .feature-item {
+        padding: 10px;
+    }
+}
+
