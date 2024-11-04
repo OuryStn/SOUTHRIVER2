@@ -4,50 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Mon Site Web</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="logo.png" alt="Logo de Mon Site" />
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">À Propos</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+
+<header>
+    <div class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo de Mon Site" />
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="intro">
-            <h1>Bienvenue sur SOUTH RIVER</h1>
-            <p>Découvrez nos services, notre équipe et bien plus encore !</p>
-            <button id="contactButton">Contactez-nous</button>
+    </div>
+    <div class="intro">
+        <h1>Bienvenue sur SOUTH RIVER</h1>
+        <p>Découvrez nos services, notre équipe et bien plus encore !</p>
+        <button id="contactButton">Contactez-nous</button>
+    </div>
+</header>
+
+<main>
+    <section id="services" class="features">
+        <h2>Nos Services</h2>
+        <div class="feature-item">
+            <img src="can.png" alt="Service d'immigration">
+            <h3>Service d'immigration au Canada</h3>
+            <p>Nous accompagnons nos clients à chaque étape de leur projet d'immigration pour réaliser leur rêve au Canada.</p>
         </div>
-    </header>
+        <div class="feature-item">
+            <img src="images/service2.jpg" alt="Service informatique">
+            <h3>Services informatiques</h3>
+            <p>Nous offrons des services comme la création de sites web, la conception graphique, la gestion de bases de données, et bien plus.</p>
+        </div>
+        <div class="feature-item">
+            <img src="images/service3.jpg" alt="Studio photo">
+            <h3>Studio photo</h3>
+            <p>Notre studio propose des séances photo professionnelles pour vos besoins, que ce soit pour des portraits ou des événements.</p>
+        </div>
+    </section>
+</main>
 
-    <main>
-        <section id="services" class="features">
-            <h2>Nos Services</h2>
-            <div class="feature-item">
-                <h3>Service d'imigration au Canada</h3>
-        <p>Nous accompagnons nos clients à chaque étape de leur projet d'immigration. Notre équipe d'experts vous aide à comprendre les exigences, à préparer les documents nécessaires et à naviguer dans le processus, afin de rendre votre rêve d'immigrer au Canada une réalité.</p>            </div>
-            <div class="feature-item">
-                <h3>Service informatiques </h3>
-        <p>Nous offrons une gamme complète de services informatiques, y compris la création de sites web sur mesure, la conception graphique, la gestion de bases de données, et des formations adaptées pour vous aider à maîtriser les outils numériques.</p>            </div>
-            <div class="feature-item">
-                <h3>Studio photos </h3>
-        <p>Notre studio photo propose des séances photo professionnelles pour tous vos besoins : portraits, événements, produits, et plus encore. Nous capturons des moments inoubliables avec un équipement de haute qualité et une approche créative.</p>            </div>
-        </section>
-    </main>
+<footer>
+    <p>&copy; 2025 SOUTH RIVER. Tous droits réservés.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2025 SOUTH RIVER. Tous droits réservés.</p>
-    </footer>
-
-    <script src="js/index.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
