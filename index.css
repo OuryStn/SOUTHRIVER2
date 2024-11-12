@@ -1,144 +1,131 @@
-/* Global reset pour un affichage adapté sur mobile */
-* {
-    box-sizing: border-box;
-}
-
-/* Styles globaux */
+/* Style global pour un fond noir et un texte blanc */
 body {
-    background-color: #000; /* Fond noir pour tout */
-    color: #fff; /* Texte blanc pour lisibilité */
+    background-color: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Barre de navigation */
+/* Style de la barre de navigation */
 .navbar {
-    background-color: #000;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    border-bottom: 2px solid white;
+    padding: 10px 0;
 }
 
 .container {
-    max-width: 100%;
-    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Affichage en colonne pour mobile */
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo img {
-    width: 100px; /* Taille réduite pour mobile */
-    height: auto;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 120px;
 }
 
-/* Navigation */
+/* Style des liens de navigation */
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 10px 0;
     display: flex;
-    flex-direction: column; /* Aligne les liens en colonne pour mobile */
-    align-items: center;
+    gap: 20px;
 }
 
-nav ul li {
-    margin: 5px 0;
-}
-
-nav ul li a {
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover {
+    color: #ff4500; /* couleur de survol rouge orangé */
 }
 
-/* Section principale */
-.features {
-    padding: 15px;
+/* Style de l'en-tête */
+header {
     text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+/* Ligne rouge entre header et le reste du contenu */
+header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ff0000;
+    margin-top: 20px;
+}
+
+/* Style de la section intro */
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#contactButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    cursor: pointer;
+}
+
+#contactButton:hover {
+    background-color: #ff6347;
+}
+
+/* Style de la section des services */
+.features {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .feature-item {
-    background-color: #111; /* Léger contraste sur fond noir */
-    border: 1px solid #444;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.feature-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-.feature-item img {
-    width: 100%;
-    max-width: 100vw; /* Limite la largeur de l'image à la largeur de l'écran */
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/* Bouton */
-button {
-    padding: 12px 20px;
-    font-size: 1em;
-    color: white;
-    background-color: #28A745;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    width: 100%; /* Bouton large sur mobile */
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-/* Footer */
-footer {
-    padding: 15px;
-    background-color: #000;
-    color: white;
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
     text-align: center;
-    font-size: 0.9em;
 }
 
-/* Media Query pour écrans de tablettes */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .logo img {
-        width: 120px;
-    }
-
-    nav ul {
-        flex-direction: row;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    .features {
-        max-width: 800px;
-        margin: auto;
-    }
-
-    button {
-        width: auto;
-    }
+.feature-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
 }
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    background-color: #111;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
