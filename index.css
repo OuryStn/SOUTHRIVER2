@@ -80,6 +80,13 @@ nav ul li a:hover {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+.feature-item img {
+    width: 100%;
+    max-width: 100vw; /* Limite la largeur de l'image à la largeur de l'écran */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
 /* Bouton */
 button {
