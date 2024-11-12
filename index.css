@@ -1,68 +1,117 @@
-/* Fond noir pour toute la page */
-body {
-    background-color: #000; /* Noir complet */
-    color: #fff; /* Texte blanc pour lisibilité */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/* Global reset pour un affichage adapté sur mobile */
+* {
+    box-sizing: border-box;
 }
 
-/* Header et Navbar */
+/* Styles globaux */
+body {
+    background-color: #000; /* Fond noir pour tout */
+    color: #fff; /* Texte blanc pour lisibilité */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
 .navbar {
-    background-color: #000; /* Noir pour la barre de navigation */
+    background-color: #000;
     color: white;
-    padding: 10px 0;
-    border-bottom: 2px solid white; /* Ligne blanche en bas pour séparation */
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column; /* Affichage en colonne pour mobile */
+    align-items: center;
 }
 
 .logo img {
-    width: 150px;
+    width: 100px; /* Taille réduite pour mobile */
     height: auto;
-    border: 3px solid white;
+    border: 2px solid white;
     border-radius: 10px;
-    background-color: #000; /* Assure un fond noir autour de l'image si besoin */
 }
 
-/* Section principale et contenu */
-main {
-    padding: 20px;
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column; /* Aligne les liens en colonne pour mobile */
+    align-items: center;
 }
 
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section principale */
 .features {
-    max-width: 800px;
-    margin: auto;
+    padding: 15px;
     text-align: center;
 }
 
 .feature-item {
-    background-color: #111; /* Noir clair pour un léger contraste */
+    background-color: #111; /* Léger contraste sur fond noir */
     border: 1px solid #444;
     border-radius: 5px;
-    padding: 15px;
+    padding: 10px;
     margin: 10px 0;
-    color: #fff;
 }
 
 .feature-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+/* Bouton */
+button {
+    padding: 12px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #28A745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%; /* Bouton large sur mobile */
+}
+
+button:hover {
+    background-color: #218838;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #000;
     color: white;
+    text-align: center;
+    font-size: 0.9em;
 }
 
-/* Styles pour le format mobile */
-@media (max-width: 768px) {
+/* Media Query pour écrans de tablettes */
+@media (min-width: 768px) {
     .container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .logo img {
@@ -70,19 +119,19 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 0 15px;
     }
 
     .features {
-        max-width: 100%;
-        padding: 0 20px;
+        max-width: 800px;
+        margin: auto;
     }
 
-    .feature-item {
-        padding: 10px;
+    button {
+        width: auto;
     }
 }
