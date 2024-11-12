@@ -1,19 +1,15 @@
-/* Styles généraux applicables à toutes les pages */
-* {
-    box-sizing: border-box;
-}
-
+/* Fond noir pour toute la page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
     margin: 0;
     padding: 0;
 }
 
 /* Styles pour le header et la navbar */
 header {
-    background-color: #333;
+    background-color: #000; /* Fond noir pour l'en-tête */
     padding: 20px 0;
     text-align: center;
 }
@@ -33,7 +29,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff; /* Texte blanc pour les liens */
     text-decoration: none;
     font-weight: bold;
 }
@@ -42,10 +38,10 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Styles spécifiques à la page des services d'immigration */
+/* Fond noir spécifique pour la page des services */
 #services-page .intro {
-    background: url('background.jpg') no-repeat center center/cover;
-    color: white;
+    background-color: #000; /* Fond noir pour la section d'intro */
+    color: #fff; /* Texte blanc */
     padding: 60px 20px;
     text-align: center;
 }
@@ -58,17 +54,20 @@ nav ul li a:hover {
 #services-page .services-section {
     padding: 50px 20px;
     text-align: center;
+    background-color: #000; /* Fond noir pour la section des services */
 }
 
 #services-page .services-section h2 {
     font-size: 2em;
     margin-bottom: 30px;
+    color: #fff;
 }
 
 #services-page .service-item {
-    background-color: white;
+    background-color: #333; /* Fond gris foncé pour contraste */
+    color: #fff; /* Texte blanc */
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #555;
     border-radius: 10px;
     text-align: center;
     max-width: 800px;
@@ -87,6 +86,32 @@ nav ul li a:hover {
     text-align: left;
     max-width: 800px;
     margin: auto;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
 }
 
-#services
+#services-page .additional-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#services-page .additional-info ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+#services-page .description {
+    padding: 30px 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
+}
+
+footer {
+    background-color: #000; /* Fond noir */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
