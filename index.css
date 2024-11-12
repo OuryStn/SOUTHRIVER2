@@ -1,117 +1,88 @@
 /* Fond noir pour toute la page */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000; /* Fond noir */
-    color: #fff; /* Texte blanc */
+    background-color: #000; /* Noir complet */
+    color: #fff; /* Texte blanc pour lisibilité */
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Styles pour le header et la navbar */
-header {
-    background-color: #000; /* Fond noir pour l'en-tête */
-    padding: 20px 0;
-    text-align: center;
+/* Header et Navbar */
+.navbar {
+    background-color: #000; /* Noir pour la barre de navigation */
+    color: white;
+    padding: 10px 0;
+    border-bottom: 2px solid white; /* Ligne blanche en bas pour séparation */
 }
 
-.navbar .container {
-    max-width: 1200px;
+.logo img {
+    width: 150px;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: #000; /* Assure un fond noir autour de l'image si besoin */
+}
+
+/* Section principale et contenu */
+main {
+    padding: 20px;
+}
+
+.features {
+    max-width: 800px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: #fff; /* Texte blanc pour les liens */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Fond noir spécifique pour la page des services */
-#services-page .intro {
-    background-color: #000; /* Fond noir pour la section d'intro */
-    color: #fff; /* Texte blanc */
-    padding: 60px 20px;
     text-align: center;
 }
 
-#services-page .intro-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-#services-page .services-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #000; /* Fond noir pour la section des services */
-}
-
-#services-page .services-section h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+.feature-item {
+    background-color: #111; /* Noir clair pour un léger contraste */
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
     color: #fff;
 }
 
-#services-page .service-item {
-    background-color: #333; /* Fond gris foncé pour contraste */
-    color: #fff; /* Texte blanc */
-    padding: 20px;
-    border: 1px solid #555;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 800px;
-    margin: auto;
-}
-
-#services-page .service-item img {
+.feature-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-#services-page .additional-info {
-    padding: 30px 20px;
-    text-align: left;
-    max-width: 800px;
-    margin: auto;
-    background-color: #000; /* Fond noir */
-    color: #fff; /* Texte blanc */
-}
-
-#services-page .additional-info h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-#services-page .additional-info ul {
-    list-style: disc inside;
-    padding-left: 20px;
-}
-
-#services-page .description {
-    padding: 30px 20px;
-    text-align: left;
-    max-width: 800px;
-    margin: auto;
-    background-color: #000; /* Fond noir */
-    color: #fff; /* Texte blanc */
-}
-
+/* Footer */
 footer {
-    background-color: #000; /* Fond noir */
-    color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+}
+
+/* Styles pour le format mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .features {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .feature-item {
+        padding: 10px;
+    }
 }
