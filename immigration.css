@@ -1,65 +1,28 @@
-/* Style global pour un fond noir et un texte blanc */
-body#services-page {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Style de la barre de navigation */
-.navbar {
-    padding: 10px 0;
-}
-
-.container {
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-/* Logo dans un cercle */
+/* Logo circulaire avec bordure */
 .logo img {
-    width: 100px; /* Taille ajustable */
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 3px solid #fff;
-    object-fit: cover;
+    border: 2px solid #fff;
+    object-fit: cover; /* Assure que tout le logo est visible */
 }
 
-/* Style des liens de navigation */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-nav a:hover {
-    color: #ff4500; /* couleur de survol rouge orangé */
-}
-
-/* Style de l'en-tête */
-header {
+/* Centrage du contenu et largeur limitée */
+.container {
+    max-width: 90%; /* Réduit la largeur pour mobile */
+    margin: 0 auto;
     text-align: center;
-    padding: 40px 20px;
-    position: relative;
 }
 
-/* Ligne rouge entre header et le reste du contenu */
-header::after {
+/* Centrage pour toutes les sections */
+.intro-content, .services-section, .additional-info, .description {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Ligne de séparation entre le corps et le pied de page */
+body#services-page::after {
     content: "";
     display: block;
     width: 100%;
@@ -68,53 +31,35 @@ header::after {
     margin-top: 20px;
 }
 
-/* Style de la section intro */
-.intro-content {
-    text-align: center;
-    margin-top: 20px;
+/* Media Queries pour les écrans de moins de 768px (tablettes et mobiles) */
+@media (max-width: 768px) {
+    .logo img {
+        width: 60px; /* Réduit le logo pour mobile */
+        height: 60px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-content p,
+    .additional-info ul li,
+    .services-section h2,
+    .description h3 {
+        font-size: 1rem; /* Ajuste la taille du texte pour mobile */
+    }
+
+    .service-item {
+        width: 90%; /* Prend presque toute la largeur en mobile */
+    }
+    
+    footer {
+        padding: 10px 0;
+    }
 }
 
-.intro-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.intro-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.intro-content button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #ff4500;
-    border: none;
-    cursor: pointer;
-}
-
-.intro-content button:hover {
-    background-color: #ff6347;
-}
-
-/* Style des sections de services et des informations */
-.services-section, .additional-info, .description {
-    text-align: center;
-    padding: 40px 20px;
-    max-width: 800px;
-}
-
-/* Ligne rouge au-dessus du footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 1rem;
-    background-color: #111;
-    color: #fff;
-    width: 100%;
-    border-top: 4px solid #ff0000;
-}
-
-footer p {
-    margin: 0;
-}
