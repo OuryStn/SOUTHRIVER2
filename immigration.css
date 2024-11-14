@@ -1,28 +1,67 @@
-/* Logo circulaire avec bordure */
+/* Style global pour le body */
+body#services-page {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Barre de navigation */
+.navbar {
+    padding: 10px 0;
+    border-bottom: 4px solid #ff0000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .logo img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 2px solid #fff;
-    object-fit: cover; /* Assure que tout le logo est visible */
-}
-
-/* Centrage du contenu et largeur limitée */
-.container {
-    max-width: 90%; /* Réduit la largeur pour mobile */
+    object-fit: cover;
+    display: block;
     margin: 0 auto;
-    text-align: center;
 }
 
-/* Centrage pour toutes les sections */
-.intro-content, .services-section, .additional-info, .description {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 100%;
+/* Liens de la navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-/* Ligne de séparation entre le corps et le pied de page */
-body#services-page::after {
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ff4500; /* couleur de survol rouge orangé */
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    flex: 1; /* Pour prendre tout l'espace vertical restant */
+}
+
+/* Ligne rouge sous l'en-tête */
+header::after {
     content: "";
     display: block;
     width: 100%;
@@ -31,35 +70,108 @@ body#services-page::after {
     margin-top: 20px;
 }
 
-/* Media Queries pour les écrans de moins de 768px (tablettes et mobiles) */
+/* Introduction */
+.intro-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.intro-content button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    cursor: pointer;
+}
+
+.intro-content button:hover {
+    background-color: #ff6347;
+}
+
+/* Sections de services */
+.services-section, .additional-info, .description {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Style du service */
+.service-item {
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1rem;
+}
+
+/* Informations supplémentaires */
+.additional-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-info ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.additional-info ul li strong {
+    color: #ff4500;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    background-color: #111;
+    color: #fff;
+    border-top: 4px solid #ff0000;
+}
+
+/* Ajustement pour appareils mobiles */
 @media (max-width: 768px) {
-    .logo img {
-        width: 60px; /* Réduit le logo pour mobile */
-        height: 60px;
+    .container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .navbar ul {
+    nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    .intro-content h1 {
-        font-size: 1.8rem;
+    .logo img {
+        width: 80px;
+        height: 80px;
     }
 
-    .intro-content p,
-    .additional-info ul li,
-    .services-section h2,
-    .description h3 {
-        font-size: 1rem; /* Ajuste la taille du texte pour mobile */
+    .intro-content h1 {
+        font-size: 2rem;
+    }
+
+    .intro-content p {
+        font-size: 1rem;
     }
 
     .service-item {
-        width: 90%; /* Prend presque toute la largeur en mobile */
-    }
-    
-    footer {
-        padding: 10px 0;
+        width: 100%;
+        margin: 10px 0;
     }
 }
+
 
