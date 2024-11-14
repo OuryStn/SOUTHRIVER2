@@ -1,4 +1,4 @@
-/* Style global pour un fond noir et un texte blanc */
+/* Style global */
 body#services-page {
     background-color: #000;
     color: #fff;
@@ -7,7 +7,7 @@ body#services-page {
     padding: 0;
 }
 
-/* Style de la barre de navigation */
+/* Navbar */
 .navbar {
     padding: 10px 0;
 }
@@ -24,7 +24,6 @@ body#services-page {
     width: 120px;
 }
 
-/* Style des liens de navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -39,27 +38,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff4500; /* couleur de survol rouge orangé */
+    color: #ff4500;
 }
 
-/* Style de l'en-tête */
-header {
-    text-align: center;
-    padding: 40px 20px;
-    position: relative;
-}
-
-/* Ligne rouge entre header et le reste du contenu */
-header::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #ff0000;
-    margin-top: 20px;
-}
-
-/* Style de la section intro */
+/* Intro */
 .intro-content h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -83,60 +65,51 @@ header::after {
     background-color: #ff6347;
 }
 
-/* Style des sections de services et des informations */
+/* Services Section */
 .services-section, .additional-info, .description {
     text-align: center;
     padding: 40px 20px;
 }
 
-.services-section h2,
-.additional-info h3,
-.description h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro-content h1 {
+        font-size: 2rem;
+    }
+
+    .services-section h2, .additional-info h3, .description h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-item {
+        width: 90%;
+    }
 }
 
-.service-item {
-    display: inline-block;
-    width: 280px;
-    margin: 20px;
-    text-align: center;
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px;
+    }
+
+    .intro-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    .intro-content button {
+        padding: 8px 16px;
+    }
 }
 
-.service-item img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.service-item p {
-    font-size: 1rem;
-}
-
-/* Style de la section additional-info */
-.additional-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.additional-info ul li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-}
-
-.additional-info ul li strong {
-    color: #ff4500;
-}
-
-/* Style du pied de page */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 1rem;
-    background-color: #111;
-    color: #fff;
-}
-
-footer p {
-    margin: 0;
-}
