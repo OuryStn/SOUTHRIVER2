@@ -12,6 +12,15 @@ body#services-page {
     min-height: 100vh;
     text-align: center;
 }
+/* Style du logo dans un cercle */
+.logo img {
+    width: 80px; /* Ajuste la taille du logo, vous pouvez adapter selon vos besoins */
+    height: 80px;
+    border-radius: 50%; /* Rend l'image circulaire */
+    border: 2px solid #fff; /* Bordure blanche */
+    object-fit: cover; /* Ajuste l'image pour remplir le cercle */
+    display: block;
+}
 
 /* Centrer la section d'introduction */
 .intro {
