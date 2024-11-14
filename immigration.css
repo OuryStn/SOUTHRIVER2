@@ -5,6 +5,11 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Pour centrer la page */
 }
 
 /* Barre de navigation */
@@ -12,6 +17,9 @@ body {
     padding: 10px 0;
     background-color: #222;
     border-bottom: 4px solid #ff0000;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .container {
@@ -23,11 +31,11 @@ body {
 }
 
 .logo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    object-fit: cover;
+    width: 120px; /* Taille du logo ajustée */
+    height: auto;
+    object-fit: contain; /* Assure que l'image est bien contenue */
+    border: 2px solid #fff; /* Bordure autour du logo */
+    border-radius: 10px; /* Rectangle pour le logo */
 }
 
 nav ul {
@@ -50,11 +58,12 @@ nav a:hover {
 /* En-tête */
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 80px 20px 40px;
 }
 
 header h1 {
     font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 /* Introduction */
