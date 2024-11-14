@@ -194,3 +194,24 @@ footer p {
         font-size: 0.9rem;
     }
 }
+/* Style du pied de page avec une ligne rouge en haut */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    background-color: #111;
+    color: #fff;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ff0000; /* couleur de la ligne rouge */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
