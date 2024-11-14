@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Pour centrer la page */
+    height: 100vh;
 }
 
 /* Barre de navigation */
@@ -33,9 +33,9 @@ body {
 .logo img {
     width: 120px; /* Taille du logo ajustée */
     height: auto;
-    object-fit: contain; /* Assure que l'image est bien contenue */
+    object-fit: contain;
     border: 2px solid #fff; /* Bordure autour du logo */
-    border-radius: 10px; /* Rectangle pour le logo */
+    border-radius: 10px;
 }
 
 nav ul {
@@ -120,4 +120,97 @@ footer {
     background-color: #222;
     color: #fff;
     border-top: 4px solid #ff0000;
+}
+
+/* Media Queries pour les écrans mobiles */
+@media (max-width: 768px) {
+    /* Barre de navigation */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 100px; /* Logo plus petit sur mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 1rem; /* Taille de texte plus petite pour mobile */
+    }
+
+    /* Header et texte */
+    header h1 {
+        font-size: 2rem; /* Taille du titre plus petite */
+    }
+
+    .intro-content h1 {
+        font-size: 2rem; /* Taille du titre dans l'intro */
+    }
+
+    .intro-content p {
+        font-size: 1rem; /* Taille du texte dans l'intro */
+    }
+
+    .intro-content button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    /* Sections */
+    .services-section h2,
+    .additional-info h3,
+    .description h3 {
+        font-size: 1.5rem; /* Taille des titres des sections plus petite */
+    }
+
+    .service-item img {
+        width: 120px; /* Taille des images plus petite */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries pour les très petits écrans (smartphones très petits) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Taille du titre encore plus petite */
+    }
+
+    .intro-content h1 {
+        font-size: 1.8rem; /* Réduire la taille sur petits écrans */
+    }
+
+    .intro-content p {
+        font-size: 0.9rem; /* Taille du texte encore plus petite */
+    }
+
+    .intro-content button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    /* Sections */
+    .services-section h2,
+    .additional-info h3,
+    .description h3 {
+        font-size: 1.3rem; /* Taille des titres des sections plus petite */
+    }
+
+    .service-item img {
+        width: 100px; /* Taille des images encore plus petite */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8rem;
+    }
 }
