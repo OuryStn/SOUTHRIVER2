@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service d'Immigration - SOUTH RIVER</title>
-    <link rel="stylesheet" href="immigration.css">
     <style>
         /* Style global pour le body */
         body {
@@ -13,7 +12,6 @@
             padding: 0;
             background-color: #000;
             color: #fff;
-            padding-top: 70px; /* Compense la hauteur de la barre de navigation */
         }
 
         /* Barre de navigation */
@@ -24,7 +22,7 @@
             width: 100%;
             position: fixed;
             top: 0;
-            z-index: 10; /* S'assure que la barre de navigation reste au-dessus du contenu */
+            z-index: 10;
         }
 
         .container {
@@ -39,9 +37,6 @@
         .logo img {
             width: 120px;
             height: auto;
-            object-fit: contain;
-            border: 2px solid #fff;
-            border-radius: 10px;
         }
 
         nav ul {
@@ -61,29 +56,24 @@
             color: #ff4500;
         }
 
-        /* En-tête */
-        header {
-            text-align: center;
-            padding: 80px 20px 40px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
         /* Introduction */
-        .intro-content h1 {
+        .intro {
+            padding-top: 80px; /* Décalage pour compenser la barre de navigation */
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .intro h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
-        .intro-content p {
+        .intro p {
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
 
-        .intro-content button {
+        .intro button {
             padding: 10px 20px;
             font-size: 1rem;
             background-color: #ff4500;
@@ -92,30 +82,25 @@
             cursor: pointer;
         }
 
-        .intro-content button:hover {
+        .intro button:hover {
             background-color: #ff6347;
         }
 
-        /* Sections de services */
-        .services-section, .additional-info, .description {
-            text-align: center;
+        /* Sections de contenu */
+        section {
             padding: 40px 20px;
         }
 
-        .services-section h2, .additional-info h3, .description h3 {
+        section h2,
+        section h3 {
             font-size: 2rem;
-        }
-
-        /* Service Item */
-        .service-item {
             text-align: center;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        .service-item img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 15px;
+        section p {
+            font-size: 1rem;
+            text-align: center;
         }
 
         /* Footer */
@@ -127,114 +112,20 @@
             color: #fff;
             border-top: 4px solid #ff0000;
         }
-
-        /* Media Queries pour les écrans mobiles */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 5px 0;
-            }
-
-            .container {
-                flex-direction: column;
-                align-items: center;
-                padding: 0 10px;
-            }
-
-            .logo img {
-                width: 100px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
-            }
-
-            nav a {
-                font-size: 1rem;
-                padding: 10px 0;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .intro-content h1 {
-                font-size: 2rem;
-            }
-
-            .intro-content p {
-                font-size: 1rem;
-            }
-
-            .intro-content button {
-                font-size: 0.9rem;
-                padding: 8px 16px;
-            }
-
-            .services-section h2,
-            .additional-info h3,
-            .description h3 {
-                font-size: 1.5rem;
-            }
-
-            .service-item img {
-                width: 120px;
-            }
-
-            footer {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            .intro-content h1 {
-                font-size: 1.8rem;
-            }
-
-            .intro-content p {
-                font-size: 0.9rem;
-            }
-
-            .intro-content button {
-                font-size: 0.8rem;
-                padding: 6px 12px;
-            }
-
-            .services-section h2,
-            .additional-info h3,
-            .description h3 {
-                font-size: 1.3rem;
-            }
-
-            .service-item img {
-                width: 100px;
-            }
-
-            footer {
-                font-size: 0.8rem;
-            }
-        }
     </style>
 </head>
 <body>
-
     <header>
         <div class="navbar">
             <div class="container">
                 <div class="logo">
-                    <img src="log.png" alt="Logo de Mon Site">
+                    <img src="log.png" alt="Logo">
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#about">À Propos</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -243,17 +134,29 @@
 
     <main>
         <section class="intro">
-            <div class="intro-content">
-                <h1>Bienvenue chez SOUTH RIVER</h1>
-                <p>Votre partenaire de confiance pour l'immigration au Canada.</p>
-                <button>En savoir plus</button>
-            </div>
+            <h1>Bienvenue chez SOUTH RIVER</h1>
+            <p>Votre partenaire de confiance pour l'immigration au Canada.</p>
+            <button>En savoir plus</button>
+        </section>
+
+        <section id="services">
+            <h2>Services d'Immigration au Canada</h2>
+            <p>Nous vous accompagnons dans chaque étape de votre processus pour vous établir au Canada.</p>
+        </section>
+
+        <section id="about">
+            <h3>À Propos</h3>
+            <p>Nous offrons des conseils personnalisés et une assistance complète pour vos démarches d'immigration.</p>
+        </section>
+
+        <section id="contact">
+            <h3>Contact</h3>
+            <p>Contactez-nous pour plus d'informations sur nos services.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 SOUTH RIVER. Tous droits réservés.</p>
     </footer>
-
 </body>
 </html>
