@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding-top: 60px; /* Compense la hauteur de la barre de navigation sur mobile */
 }
 
 /* Barre de navigation */
@@ -20,6 +21,7 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 10; /* S'assure que la barre de navigation reste au-dessus du contenu */
 }
 
 .container {
@@ -28,6 +30,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px; /* Ajout d'un peu de padding pour éviter que le contenu touche les bords */
 }
 
 .logo img {
@@ -125,13 +128,18 @@ footer {
 /* Media Queries pour les écrans mobiles */
 @media (max-width: 768px) {
     /* Barre de navigation */
+    .navbar {
+        padding: 5px 0; /* Réduire la taille de la barre de navigation sur mobile */
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
+        padding: 0 10px; /* Ajustez l'espacement horizontal pour mobile */
     }
 
     .logo img {
-        width: 100px; /* Logo plus petit sur mobile */
+        width: 100px; /* Réduire la taille du logo sur mobile */
     }
 
     nav ul {
@@ -141,7 +149,12 @@ footer {
     }
 
     nav a {
-        font-size: 1rem; /* Taille de texte plus petite pour mobile */
+        font-size: 1rem; /* Réduire la taille des liens de navigation sur mobile */
+        padding: 10px 0; /* Ajouter un peu d'espacement autour des liens */
+    }
+
+    nav a:hover {
+        color: #ff4500;
     }
 
     /* Header et texte */
