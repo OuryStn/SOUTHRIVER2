@@ -5,6 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service d'Immigration - SOUTH RIVER</title>
     <link rel="stylesheet" href="immigration.css">
+    <style>
+        /* Style global pour le body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            padding-top: 70px; /* Compense la hauteur de la barre de navigation */
+        }
+
+        /* Barre de navigation */
+        .navbar {
+            padding: 10px 0;
+            background-color: #222;
+            border-bottom: 4px solid #ff0000;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 10; /* S'assure que la barre de navigation reste au-dessus du contenu */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #ff4500;
+        }
+
+        /* En-tête */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Introduction */
+        .intro-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .intro-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .intro-content button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .intro-content button:hover {
+            background-color: #ff6347;
+        }
+
+        /* Sections de services */
+        .services-section, .additional-info, .description {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .services-section h2, .additional-info h3, .description h3 {
+            font-size: 2rem;
+        }
+
+        /* Service Item */
+        .service-item {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .service-item img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1rem;
+            background-color: #222;
+            color: #fff;
+            border-top: 4px solid #ff0000;
+        }
+
+        /* Media Queries pour les écrans mobiles */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 5px 0;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 10px;
+            }
+
+            .logo img {
+                width: 100px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 10px 0;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .intro-content h1 {
+                font-size: 2rem;
+            }
+
+            .intro-content p {
+                font-size: 1rem;
+            }
+
+            .intro-content button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            .services-section h2,
+            .additional-info h3,
+            .description h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-item img {
+                width: 120px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .intro-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .intro-content p {
+                font-size: 0.9rem;
+            }
+
+            .intro-content button {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .services-section h2,
+            .additional-info h3,
+            .description h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-item img {
+                width: 100px;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -33,32 +248,6 @@
                 <p>Votre partenaire de confiance pour l'immigration au Canada.</p>
                 <button>En savoir plus</button>
             </div>
-        </section>
-
-        <section class="services-section">
-            <h2>Service d'Immigration au Canada</h2>
-            <div class="service-item">
-                <img src="can.png" alt="Service d'immigration">
-                <p>Nous vous accompagnons dans chaque étape de votre processus pour vous établir au Canada. Nous proposons des conseils personnalisés et une assistance complète.</p>
-            </div>
-        </section>
-
-        <section class="additional-info">
-            <h3>Actualités sur l'Immigration</h3>
-            <p>Les politiques d'immigration canadiennes évoluent constamment. Le Canada accueille des professionnels qualifiés, étudiants, entrepreneurs et travailleurs temporaires.</p>
-            <h3>Opportunités de Visa et Programmes d'Immigration</h3>
-            <ul>
-                <li><strong>Entrée Express :</strong> Programme pour travailleurs qualifiés vers la résidence permanente.</li>
-                <li><strong>PCP :</strong> Provinces et territoires sélectionnent des candidats pour combler leurs besoins spécifiques.</li>
-                <li><strong>PTPD :</strong> Permis de travail post-diplôme pour les étudiants diplômés au Canada.</li>
-                <li><strong>Parrainage familial :</strong> Pour les résidents permanents parrainant leur famille.</li>
-                <li><strong>Visa d'Affaires :</strong> Pour les entrepreneurs souhaitant démarrer une entreprise innovante.</li>
-            </ul>
-        </section>
-
-        <section class="description">
-            <h3>Description de Notre Service</h3>
-            <p>Chez SOUTH RIVER, notre équipe vous guide dans votre projet d'immigration en vous offrant une expérience fluide et sereine.</p>
         </section>
     </main>
 
