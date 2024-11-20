@@ -1,49 +1,43 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immigration - SOUTH RIVER</title>
+    <title>Service d'Immigration - SOUTH RIVER</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Style global */
+        /* Styles globaux */
         body {
-            background-color: #000; /* Noir */
-            color: #fff; /* Blanc pour le texte */
+            background-color: #000;
+            color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        /* Barre de navigation */
+        /* Header (Barre de navigation) */
         .navbar {
-            padding: 10px 0;
-            background-color: #000; /* Noir */
-            border-bottom: 4px solid #ff0000; /* Rouge pour une touche de contraste */
-            position: fixed;
-            width: 100%;
+            padding: 10px 20px;
+            background-color: #000;
+            border-bottom: 2px solid #ff0000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo img {
-            width: 120px;
+        .navbar .logo img {
+            width: 100px;
         }
 
         nav ul {
             list-style-type: none;
             display: flex;
-            gap: 30px; /* Ajout d'espacement entre les liens */
-            margin: 0;
+            gap: 20px;
             padding: 0;
+            margin: 0;
         }
 
         nav a {
@@ -53,14 +47,13 @@
         }
 
         nav a:hover {
-            color: #ff4500; /* Effet hover */
+            color: #ff4500;
         }
 
-        /* Introduction */
+        /* Section Introduction */
         .intro {
             text-align: center;
-            padding: 80px 20px 40px;
-            margin-top: 60px; /* Décalage pour compenser la navbar fixe */
+            padding: 40px 20px;
         }
 
         .intro h1 {
@@ -73,7 +66,13 @@
             margin-bottom: 20px;
         }
 
-        /* Section des services */
+        .intro img {
+            width: 120px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        /* Section Services */
         .features {
             text-align: center;
             padding: 40px 20px;
@@ -111,28 +110,27 @@
             text-align: center;
             padding: 20px 0;
             font-size: 1rem;
-            background-color: #000; /* Noir */
-            color: #fff; /* Blanc pour le texte */
-            border-top: 4px solid #ff0000; /* Rouge pour délimiter */
+            background-color: #000;
+            color: #fff;
+            border-top: 2px solid #ff0000;
         }
     </style>
 </head>
 <body>
+
 <header>
     <div class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="log.png" alt="Logo de SOUTH RIVER">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">À Propos</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <img src="log.png" alt="Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">À Propos</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -141,32 +139,45 @@
     <section class="intro">
         <h1>Immigration au Canada</h1>
         <p>Découvrez comment SOUTH RIVER peut vous accompagner à chaque étape de votre projet d'immigration.</p>
+        <img src="can.png" alt="Drapeau du Canada">
     </section>
 
     <!-- Services -->
     <section id="services" class="features">
         <h2>Nos Services d'Immigration</h2>
         <div class="feature-item">
-            <a href="visa.html"><img src="can.png" alt="Conseils Personnalisés"></a>
-            <h3>Conseils Personnalisés</h3>
-            <p>Nous vous guidons pas à pas dans toutes les démarches nécessaires pour réussir votre projet.</p>
+            <a href="#"><img src="can.png" alt="Entrée Express"></a>
+            <h3>Entrée Express</h3>
+            <p>Programme pour travailleurs qualifiés vers la résidence permanente au Canada.</p>
         </div>
         <div class="feature-item">
-            <a href="parrainage.html"><img src="family.png" alt="Parrainage Familial"></a>
-            <h3>Parrainage Familial</h3>
-            <p>Assistance pour réunir vos proches au Canada grâce aux programmes adaptés.</p>
+            <a href="#"><img src="family.png" alt="Parrainage familial"></a>
+            <h3>Parrainage familial</h3>
+            <p>Réunissez votre famille grâce aux programmes de parrainage au Canada.</p>
         </div>
         <div class="feature-item">
-            <a href="travail.html"><img src="visa.png" alt="Visa de Travail"></a>
-            <h3>Visa de Travail</h3>
-            <p>Nous aidons les professionnels à trouver des opportunités et à obtenir les permis nécessaires.</p>
+            <a href="#"><img src="study.png" alt="Étudiants internationaux"></a>
+            <h3>Étudiants internationaux</h3>
+            <p>Obtenez un permis d’études et explorez les opportunités éducatives au Canada.</p>
         </div>
+    </section>
+
+    <!-- Actualités -->
+    <section id="news">
+        <h2>Actualités sur l'Immigration</h2>
+        <p>Les politiques d'immigration canadiennes évoluent constamment. Renseignez-vous sur les dernières opportunités.</p>
+    </section>
+
+    <!-- À propos -->
+    <section id="about">
+        <h2>À Propos de Nous</h2>
+        <p>Chez SOUTH RIVER, notre objectif est de rendre votre projet d'immigration simple et accessible. Nous offrons des services sur mesure pour répondre à vos besoins spécifiques.</p>
     </section>
 </main>
 
-<!-- Footer -->
 <footer>
     <p>&copy; 2025 SOUTH RIVER. Tous droits réservés.</p>
 </footer>
+
 </body>
 </html>
