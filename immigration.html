@@ -1,183 +1,97 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service d'Immigration - SOUTH RIVER</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Navigation Responsive</title>
     <style>
-        /* Styles globaux */
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
+        /* Styles par défaut pour la navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #323232;
+            padding: 10px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .nav ul {
+            display: flex; /* Menu horizontal */
+            list-style: none;
             margin: 0;
             padding: 0;
         }
 
-        /* Header (Barre de navigation) */
-        .navbar {
-            padding: 10px 20px;
-            background-color: #000;
-            border-bottom: 2px solid #ff0000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .nav ul li {
+            margin: 0 15px;
         }
 
-        .navbar .logo img {
-            width: 100px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            gap: 20px;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav a {
-            color: #fff;
+        .nav ul li a {
             text-decoration: none;
-            font-size: 1.1rem;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
         }
 
-        nav a:hover {
-            color: #ff4500;
+        /* Bouton menu burger caché par défaut */
+        .menu-toggle {
+            display: none;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: auto; /* Pousse le bouton à droite */
         }
 
-        /* Section Introduction */
-        .intro {
-            text-align: center;
-            padding: 40px 20px;
-        }
+        /* Adaptation pour petits écrans */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; /* Affiche le bouton burger */
+            }
 
-        .intro h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+            .nav ul {
+                display: none; /* Masque le menu par défaut */
+                flex-direction: column; /* Menu en liste verticale */
+                background-color: #323232;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                padding: 10px;
+                border: 2px solid white;
+                border-radius: 5px;
+            }
 
-        .intro p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
+            .nav ul.active {
+                display: flex; /* Affiche le menu quand on clique */
+            }
 
-        .intro img {
-            width: 120px;
-            height: auto;
-            margin: 20px auto;
-        }
-
-        /* Section Services */
-        .features {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .features h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
-
-        .feature-item {
-            display: inline-block;
-            width: 280px;
-            margin: 20px;
-            text-align: center;
-        }
-
-        .feature-item img {
-            width: 100px;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .feature-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .feature-item p {
-            font-size: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 1rem;
-            background-color: #000;
-            color: #fff;
-            border-top: 2px solid #ff0000;
+            .nav ul li {
+                margin: 10px 0; /* Espacement entre les items */
+            }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <div class="navbar">
-        <div class="logo">
-            <img src="log.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#about">À Propos</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <div class="nav" id="nav">
+        <!-- Bouton menu burger -->
+        <button class="menu-toggle">☰</button>
+        <ul>
+            <li><a href="#1">Actualités</a></li>
+            <li><a href="#2">Projets</a></li>
+            <li><a href="#3">Galerie</a></li>
+            <li><a href="#4">Nous contacter</a></li>
+        </ul>
     </div>
-</header>
 
-<main>
-    <!-- Introduction -->
-    <section class="intro">
-        <h1>Immigration au Canada</h1>
-        <p>Découvrez comment SOUTH RIVER peut vous accompagner à chaque étape de votre projet d'immigration.</p>
-        <img src="can.png" alt="Drapeau du Canada">
-    </section>
+    <script>
+        // Script pour gérer le menu déroulant
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav ul');
 
-    <!-- Services -->
-    <section id="services" class="features">
-        <h2>Nos Services d'Immigration</h2>
-        <div class="feature-item">
-            <a href="#"><img src="can.png" alt="Entrée Express"></a>
-            <h3>Entrée Express</h3>
-            <p>Programme pour travailleurs qualifiés vers la résidence permanente au Canada.</p>
-        </div>
-        <div class="feature-item">
-            <a href="#"><img src="family.png" alt="Parrainage familial"></a>
-            <h3>Parrainage familial</h3>
-            <p>Réunissez votre famille grâce aux programmes de parrainage au Canada.</p>
-        </div>
-        <div class="feature-item">
-            <a href="#"><img src="study.png" alt="Étudiants internationaux"></a>
-            <h3>Étudiants internationaux</h3>
-            <p>Obtenez un permis d’études et explorez les opportunités éducatives au Canada.</p>
-        </div>
-    </section>
-
-    <!-- Actualités -->
-    <section id="news">
-        <h2>Actualités sur l'Immigration</h2>
-        <p>Les politiques d'immigration canadiennes évoluent constamment. Renseignez-vous sur les dernières opportunités.</p>
-    </section>
-
-    <!-- À propos -->
-    <section id="about">
-        <h2>À Propos de Nous</h2>
-        <p>Chez SOUTH RIVER, notre objectif est de rendre votre projet d'immigration simple et accessible. Nous offrons des services sur mesure pour répondre à vos besoins spécifiques.</p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2025 SOUTH RIVER. Tous droits réservés.</p>
-</footer>
-
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active'); // Basculer entre affiché et masqué
+        });
+    </script>
 </body>
 </html>
