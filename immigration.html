@@ -1,94 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Responsive</title>
     <style>
         /* Styles par défaut pour la navigation */
-       /* Style global pour un fond noir et un texte blanc */
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Style de la barre de navigation */
-.navbar {
-    padding: 10px 0;
-}
+        /* Style de la barre de navigation */
+        .navbar {
+            padding: 10px 0;
+        }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.logo img {
-    width: 120px;
-}
+        .logo img {
+            width: 120px;
+        }
+
         /* Style des liens de navigation */
-ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
-nav a:hover {
-    color: #ff4500; /* couleur de survol rouge orangé */
-}
+        nav a:hover {
+            color: #ff4500; /* couleur de survol rouge orangé */
+        }
 
-/* Style de l'en-tête */
-header {
-    text-align: center;
-    padding: 40px 20px;
-    position: relative;
-}
+        /* Style de l'en-tête */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
 
-/* Ligne rouge entre header et le reste du contenu */
-header::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #ff0000;
-    margin-top: 20px;
-}
+        /* Ligne rouge entre header et le reste du contenu */
+        header::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #ff0000;
+            margin-top: 20px;
+        }
 
-/* Style de la section intro */
-.intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+        /* Style de la section intro */
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-.intro p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
+        .intro p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
 
-#contactButton {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #ff4500;
-    border: none;
-    cursor: pointer;
-}
+        #contactButton {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff4500;
+            border: none;
+            cursor: pointer;
+        }
 
-#contactButton:hover {
-    background-color: #ff6347;
-}
+        #contactButton:hover {
+            background-color: #ff6347;
+        }
 
         /* Bouton menu burger caché par défaut */
         .menu-toggle {
@@ -107,7 +107,7 @@ header::after {
                 display: block; /* Affiche le bouton burger */
             }
 
-         ul {
+            ul {
                 display: none; /* Masque le menu par défaut */
                 flex-direction: column; /* Menu en liste verticale */
                 background-color: #323232;
@@ -119,7 +119,7 @@ header::after {
                 border-radius: 5px;
             }
 
-        ul.active {
+            ul.active {
                 display: flex; /* Affiche le menu quand on clique */
             }
 
@@ -131,31 +131,29 @@ header::after {
 </head>
 <body>
     <header>
-    <div class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="log.png" alt="Logo de Mon Site">
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="log.png" alt="Logo de Mon Site">
+                </div>
+                <div class="nav" id="nav">
+                    <!-- Bouton menu burger -->
+                    <button class="menu-toggle">☰</button>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li> <!-- Lien vers la page d'accueil -->
+                        <li><a href="#services">Services</a></li> <!-- Lien vers la section Services -->
+                        <li><a href="#about">A propos</a></li> <!-- Lien vers la section A propos -->
+                        <li><a href="#contact">Nous contacter</a></li> <!-- Lien vers la section Contact -->
+                    </ul>
+                </div>
             </div>
-              <div class="nav" id="nav">
-        <!-- Bouton menu burger -->
-        <button class="menu-toggle">☰</button>
-        <ul>
-            <li><a href="index.html">Acceuil</a></li>
-            <li><a href="#2">Services</a></li>
-            <li><a href="#3">A propos</a></li>
-            <li><a href="#4">Nous contacter</a></li>
-        </ul>
-    </div>
         </div>
-    </div>
-    <div class="intro">
-        <h1>Bienvenue sur SOUTH RIVER</h1>
-        <p>Découvrez nos services, notre équipe et bien plus encore !</p>
-        <button id="contactButton">Contactez-nous</button>
-    </div>
-       
+        <div class="intro">
+            <h1>Bienvenue sur SOUTH RIVER</h1>
+            <p>Découvrez nos services, notre équipe et bien plus encore !</p>
+            <button id="contactButton">Contactez-nous</button>
+        </div>
     </header>
-   
 
     <script>
         // Script pour gérer le menu déroulant
