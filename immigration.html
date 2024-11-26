@@ -40,13 +40,19 @@
         }
 
         nav a {
-            color: #fff;
-            text-decoration: none;
+            color: #fff; /* Couleur blanche pour les liens */
+            text-decoration: none; /* Supprime le soulignement */
             font-size: 1.1rem;
         }
 
         nav a:hover {
-            color: #ff4500; /* couleur de survol rouge orangé */
+            color: #ff4500; /* Rouge orangé au survol */
+        }
+
+        nav a:visited,
+        nav a:active {
+            color: #fff; /* Maintient la couleur blanche */
+            text-decoration: none;
         }
 
         /* Style de l'en-tête */
@@ -140,10 +146,10 @@
                     <!-- Bouton menu burger -->
                     <button class="menu-toggle">☰</button>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li> <!-- Lien vers la page d'accueil -->
-                        <li><a href="#services">Services</a></li> <!-- Lien vers la section Services -->
-                        <li><a href="#about">A propos</a></li> <!-- Lien vers la section A propos -->
-                        <li><a href="#contact">Nous contacter</a></li> <!-- Lien vers la section Contact -->
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">A propos</a></li>
+                        <li><a href="#contact">Nous contacter</a></li>
                     </ul>
                 </div>
             </div>
@@ -165,4 +171,4 @@
         });
     </script>
 </body>
-</html> 
+</html>
