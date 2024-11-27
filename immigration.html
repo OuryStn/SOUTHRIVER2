@@ -40,21 +40,20 @@
         }
 
         nav a {
-            color: #fff; /* Couleur blanche pour les liens */
+            color: #ff4500; /* Rouge orangé par défaut */
             text-decoration: none; /* Supprime le soulignement */
-            font-size: 1.1rem;
-            padding: 10px; /* Rendre les liens plus cliquables */
-            position: relative;
-            z-index: 10; /* Assure que les liens sont prioritaires */
+            font-size: 1.1rem; /* Taille par défaut */
+            transition: all 0.3s ease; /* Transition fluide pour le survol */
         }
 
         nav a:hover {
-            color: #ff4500; /* Rouge orangé au survol */
+            color: #ff0000; /* Rouge vif au survol */
+            font-size: 1.3rem; /* Augmente la taille au survol */
         }
 
         nav a:visited,
         nav a:active {
-            color: #fff; /* Maintient la couleur blanche */
+            color: #ff4500; /* Maintient la couleur rouge orangé */
             text-decoration: none;
         }
 
@@ -107,7 +106,7 @@
             color: white;
             font-size: 24px;
             cursor: pointer;
-            margin-left: auto; /* Pousse le bouton à droite */
+            margin-left: auto;
         }
 
         /* Adaptation pour petits écrans */
@@ -130,11 +129,10 @@
 
             ul.active {
                 display: flex; /* Affiche le menu quand on clique */
-                z-index: 100; /* Priorité pour les liens */
             }
 
             ul li {
-                margin: 10px 0; /* Espacement entre les items */
+                margin: 10px 0;
             }
         }
     </style>
@@ -164,20 +162,6 @@
             <button id="contactButton">Contactez-nous</button>
         </div>
     </header>
-
-    <!-- Contenu des sections correspondantes -->
-    <section id="services">
-        <h2>Nos Services</h2>
-        <p>Description de vos services...</p>
-    </section>
-    <section id="about">
-        <h2>À propos</h2>
-        <p>Informations sur votre entreprise...</p>
-    </section>
-    <section id="contact">
-        <h2>Nous contacter</h2>
-        <p>Contactez-nous via nos réseaux sociaux ou par email.</p>
-    </section>
 
     <script>
         // Script pour gérer le menu déroulant
