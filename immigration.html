@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Responsive</title>
     <style>
-        /* Styles généraux */
+        /* Styles par défaut pour la navigation */
         body {
             background-color: #000;
             color: #fff;
@@ -40,16 +40,16 @@
         }
 
         nav a {
-            color: #ff0000; /* Rouge vif (comme la ligne du header) */
-            text-decoration: none; /* Pas de soulignement par défaut */
+            color: #fff; /* Couleur blanche par défaut */
+            text-decoration: none; /* Pas de soulignement */
             font-size: 1.1rem;
-            transition: all 0.3s ease; /* Transition fluide */
+            transition: all 0.3s ease; /* Animation fluide */
         }
 
         nav a:hover {
             text-decoration: underline; /* Soulignement rouge au survol */
-            text-decoration-color: #ff0000; /* Rouge vif pour le soulignement */
-            font-size: 1.2rem; /* Augmente légèrement la taille */
+            text-decoration-color: #ff0000;
+            color: #ff0000; /* Change la couleur du texte au survol */
         }
 
         /* Style de l'en-tête */
@@ -166,5 +166,6 @@
         menuToggle.addEventListener('click', () => {
             navList.classList.toggle('active'); // Basculer entre affiché et masqué
         });
-  
-
+    </script>
+</body>
+</html>
