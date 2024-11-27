@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Responsive</title>
     <style>
-        /* Styles par défaut pour la navigation */
+        /* Réinitialisation des styles de liens */
+        a {
+            text-decoration: none; /* Supprime le soulignement */
+            color: inherit; /* Hérite de la couleur définie */
+        }
+
+        /* Styles par défaut pour le corps */
         body {
             background-color: #000;
             color: #fff;
@@ -49,12 +55,6 @@
         nav a:hover {
             color: #ff0000; /* Rouge vif au survol */
             font-size: 1.3rem; /* Augmente la taille au survol */
-        }
-
-        nav a:visited,
-        nav a:active {
-            color: #ff4500; /* Maintient la couleur rouge orangé */
-            text-decoration: none;
         }
 
         /* Style de l'en-tête */
