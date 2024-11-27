@@ -43,6 +43,9 @@
             color: #fff; /* Couleur blanche pour les liens */
             text-decoration: none; /* Supprime le soulignement */
             font-size: 1.1rem;
+            padding: 10px; /* Rendre les liens plus cliquables */
+            position: relative;
+            z-index: 10; /* Assure que les liens sont prioritaires */
         }
 
         nav a:hover {
@@ -127,6 +130,7 @@
 
             ul.active {
                 display: flex; /* Affiche le menu quand on clique */
+                z-index: 100; /* Priorité pour les liens */
             }
 
             ul li {
@@ -148,7 +152,7 @@
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#about">A propos</a></li>
+                        <li><a href="#about">À propos</a></li>
                         <li><a href="#contact">Nous contacter</a></li>
                     </ul>
                 </div>
@@ -160,6 +164,20 @@
             <button id="contactButton">Contactez-nous</button>
         </div>
     </header>
+
+    <!-- Contenu des sections correspondantes -->
+    <section id="services">
+        <h2>Nos Services</h2>
+        <p>Description de vos services...</p>
+    </section>
+    <section id="about">
+        <h2>À propos</h2>
+        <p>Informations sur votre entreprise...</p>
+    </section>
+    <section id="contact">
+        <h2>Nous contacter</h2>
+        <p>Contactez-nous via nos réseaux sociaux ou par email.</p>
+    </section>
 
     <script>
         // Script pour gérer le menu déroulant
