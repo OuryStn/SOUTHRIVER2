@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Responsive</title>
     <style>
-        /* Réinitialisation des styles de liens */
-        a {
-            text-decoration: none; /* Supprime le soulignement */
-            color: inherit; /* Hérite de la couleur définie */
-        }
-
-        /* Styles par défaut pour le corps */
-        body {
+       body {
             background-color: #000;
             color: #fff;
             font-family: Arial, sans-serif;
@@ -38,7 +31,7 @@
         }
 
         /* Style des liens de navigation */
-        ul {
+        nav ul {
             list-style-type: none;
             padding: 0;
             display: flex;
@@ -46,15 +39,13 @@
         }
 
         nav a {
-            color: #ff4500; /* Rouge orangé par défaut */
-            text-decoration: none; /* Supprime le soulignement */
-            font-size: 1.1rem; /* Taille par défaut */
-            transition: all 0.3s ease; /* Transition fluide pour le survol */
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
         }
 
         nav a:hover {
-            color: #ff0000; /* Rouge vif au survol */
-            font-size: 1.3rem; /* Augmente la taille au survol */
+            color: #ff4500; /* couleur de survol rouge orangé */
         }
 
         /* Style de l'en-tête */
@@ -97,8 +88,7 @@
         #contactButton:hover {
             background-color: #ff6347;
         }
-
-        /* Bouton menu burger caché par défaut */
+          /* Bouton menu burger caché par défaut */
         .menu-toggle {
             display: none;
             background-color: transparent;
