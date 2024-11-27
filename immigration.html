@@ -39,13 +39,14 @@
         }
 
         nav a {
-            color: #fff;
+            color: #fff; /* Texte blanc */
             text-decoration: none;
             font-size: 1.1rem;
+            transition: color 0.3s; /* Transition fluide */
         }
 
         nav a:hover {
-            color: #ff4500; /* couleur de survol rouge orangé */
+            color: #ff6347; /* Survol orange clair */
         }
 
         /* Style de l'en-tête */
@@ -83,12 +84,13 @@
             background-color: #ff4500;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s; /* Transition fluide */
         }
 
         #contactButton:hover {
-            background-color: #ff6347;
+            background-color: #ff6347; /* Survol bouton */
         }
-        
+
         /* Bouton menu burger caché par défaut */
         .menu-toggle {
             display: none;
@@ -106,10 +108,10 @@
                 display: block; /* Affiche le bouton burger */
             }
 
-            nav ul {
+            ul {
                 display: none; /* Masque le menu par défaut */
                 flex-direction: column; /* Menu en liste verticale */
-                background-color: #323232;
+                background-color: #323232; /* Fond sombre du menu */
                 position: absolute;
                 top: 50px;
                 right: 10px;
@@ -118,11 +120,11 @@
                 border-radius: 5px;
             }
 
-            nav ul.active {
+            ul.active {
                 display: flex; /* Affiche le menu quand on clique */
             }
 
-            nav ul li {
+            ul li {
                 margin: 10px 0;
             }
         }
@@ -165,4 +167,3 @@
     </script>
 </body>
 </html>
-
