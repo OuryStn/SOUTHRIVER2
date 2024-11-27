@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Responsive</title>
     <style>
-        /* Styles par défaut pour la navigation */
+        /* Réinitialisation des styles de liens */
+        a {
+            text-decoration: none; /* Supprime le soulignement */
+            color: inherit; /* Hérite de la couleur définie */
+        }
+
+        /* Styles par défaut pour le corps */
         body {
             background-color: #000;
             color: #fff;
@@ -40,16 +46,15 @@
         }
 
         nav a {
-            color: #fff; /* Couleur blanche par défaut */
-            text-decoration: none; /* Pas de soulignement */
-            font-size: 1.1rem;
-            transition: all 0.3s ease; /* Animation fluide */
+            color: #ff4500; /* Rouge orangé par défaut */
+            text-decoration: none; /* Supprime le soulignement */
+            font-size: 1.1rem; /* Taille par défaut */
+            transition: all 0.3s ease; /* Transition fluide pour le survol */
         }
 
         nav a:hover {
-            text-decoration: underline; /* Soulignement rouge au survol */
-            text-decoration-color: #ff0000;
-            color: #ff0000; /* Change la couleur du texte au survol */
+            color: #ff0000; /* Rouge vif au survol */
+            font-size: 1.3rem; /* Augmente la taille au survol */
         }
 
         /* Style de l'en-tête */
@@ -59,7 +64,7 @@
             position: relative;
         }
 
-        /* Ligne rouge entre le header et le reste du contenu */
+        /* Ligne rouge entre header et le reste du contenu */
         header::after {
             content: "";
             display: block;
@@ -107,12 +112,12 @@
         /* Adaptation pour petits écrans */
         @media (max-width: 768px) {
             .menu-toggle {
-                display: block;
+                display: block; /* Affiche le bouton burger */
             }
 
             ul {
                 display: none; /* Masque le menu par défaut */
-                flex-direction: column; /* Liste verticale */
+                flex-direction: column; /* Menu en liste verticale */
                 background-color: #323232;
                 position: absolute;
                 top: 50px;
@@ -123,11 +128,11 @@
             }
 
             ul.active {
-                display: flex; /* Affiche le menu lorsqu'on clique */
+                display: flex; /* Affiche le menu quand on clique */
             }
 
             ul li {
-                margin: 10px 0; /* Espacement entre les items */
+                margin: 10px 0;
             }
         }
     </style>
