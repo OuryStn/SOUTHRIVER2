@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Responsive</title>
+    <title>Accueil - Mon Site Web</title>
     <style>
+        /* Style global pour un fond noir et un texte blanc */
         body {
             background-color: #000;
             color: #fff;
@@ -39,15 +40,13 @@
         }
 
         nav a {
-            color: #6a0dad; /* Texte par défaut en violet */
+            color: #fff;
+            text-decoration: none;
             font-size: 1.1rem;
-            font-weight: bold;
-            transition: color 0.3s ease; /* Transition fluide sur la couleur */
-            text-decoration: none; /* Supprime le soulignement */
         }
 
         nav a:hover {
-            color: #ff4500; /* Survol avec couleur orange */
+            color: #ff4500; /* couleur de survol rouge orangé */
         }
 
         /* Style de l'en-tête */
@@ -85,86 +84,111 @@
             background-color: #ff4500;
             border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease; /* Transition fluide sur le bouton */
         }
 
         #contactButton:hover {
-            background-color: #ff6347; /* Survol bouton */
+            background-color: #ff6347;
         }
 
-        /* Bouton menu burger caché par défaut */
-        .menu-toggle {
-            display: none;
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            margin-left: auto;
+        /* Style de la section des services */
+        .features {
+            text-align: center;
+            padding: 40px 20px;
         }
 
-        /* Adaptation pour petits écrans */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block; /* Affiche le bouton burger */
-            }
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
 
-            ul {
-                display: none; /* Masque le menu par défaut */
-                flex-direction: column; /* Menu en liste verticale */
-                background-color: #323232; /* Fond sombre du menu */
-                position: absolute;
-                top: 50px;
-                right: 10px;
-                padding: 10px;
-                border: 2px solid white;
-                border-radius: 5px;
-            }
+        .feature-item {
+            display: inline-block;
+            width: 280px;
+            margin: 20px;
+            text-align: center;
+        }
 
-            ul.active {
-                display: flex; /* Affiche le menu quand on clique */
-            }
+        .feature-item img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
 
-            ul li {
-                margin: 10px 0;
-            }
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+        }
+
+        /* Style du pied de page */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1rem;
+            background-color: #111;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="log.png" alt="Logo de Mon Site">
-                </div>
-                <div class="nav" id="nav">
-                    <!-- Bouton menu burger -->
-                    <button class="menu-toggle">☰</button>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#contact">Nous contacter</a></li>
-                    </ul>
-                </div>
+<header>
+    <div class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="log.png" alt="Logo de Mon Site">
             </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="intro">
-            <h1>Bienvenue sur SOUTH RIVER</h1>
-            <p>Découvrez nos services, notre équipe et bien plus encore !</p>
-            <button id="contactButton">Contactez-nous</button>
+    </div>
+    <div class="intro">
+        <h1>Bienvenue sur SOUTH RIVER</h1>
+        <p>Découvrez nos services, notre équipe et bien plus encore !</p>
+        <button id="contactButton">Contactez-nous</button>
+    </div>
+</header>
+
+<main>
+    <section id="services" class="features">
+        <h2>Nos Services</h2>
+        <div class="feature-item">
+            <a href="immigration.html"><img src="can.png" alt="Service d'immigration"></a>
+            <h3>Service d'immigration au Canada</h3>
+            <p>Nous accompagnons nos clients à chaque étape de leur projet d'immigration pour réaliser leur rêve au Canada.</p>
         </div>
-    </header>
+        <div class="feature-item">
+            <a href="Sinformatiques.html"><img src="infor.png" alt="Service d'immigration"></a>
+            <h3>Services informatiques</h3>
+            <p>Nous offrons des services comme la création de sites web, la conception graphique, la gestion de bases de données, et bien plus.</p>
+        </div>
+        <div class="feature-item">
+            <img src="cam.png" alt="Studio photo">
+            <h3>Studio photo</h3>
+            <p>Notre studio propose des séances photo professionnelles pour vos besoins, que ce soit pour des portraits ou des événements.</p>
+        </div>
+    </section>
+</main>
 
-    <script>
-        // Script pour gérer le menu déroulant
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('.nav ul');
+<footer>
+    <p>&copy; 2025 SOUTH RIVER. Tous droits réservés.</p>
+</footer>
 
-        menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active'); // Basculer entre affiché et masqué
-        });
-    </script>
+<script>
+    document.getElementById("contactButton").addEventListener("click", function() {
+        alert("Merci de nous contacter !");
+    });
+</script>
 </body>
 </html>
